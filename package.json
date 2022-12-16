@@ -1,0 +1,27 @@
+{
+  "name": "wiremock-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:katebeavis/wiremock-server.git",
+  "author": "Kate Beavis <katebeavis84@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "serve:wiremock": "wiremock --root-dir ./ --port 8083",
+    "serve:express": "nodemon --exec babel-node index.js logRequests",
+    "serve": "concurrently 'yarn serve:wiremock' 'yarn serve:express'"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-http-proxy": "^1.6.3",
+    "nocache": "^2.1.0",
+    "nodemon": "^1.17.5",
+    "wiremock": "^2.35.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "concurrently": "^4.1.2"
+  }
+}

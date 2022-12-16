@@ -1,0 +1,7 @@
+.idea/
+.history/
+node_modules/
+.history
+*.iml
+.DS_Store
+yarn-error.log
